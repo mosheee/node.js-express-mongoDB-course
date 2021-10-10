@@ -1,4 +1,3 @@
-console.log('client side is loaded')
 
 
 // with fetch we can take a result from one http and use it in another http
