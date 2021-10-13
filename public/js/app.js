@@ -15,7 +15,7 @@ weatherForm.addEventListener('submit', (event) => {
     event.preventDefault()
     messageOne.textContent = 'loading...'
     const location = search.value
-    fetch('http://localhost:3000/weather?address='+location).then((result) => {
+    fetch('/weather?address='+location).then((result) => {
         result.json().then((data) => {
             if(data.error){
                 messageOne.textContent = 'select another location'
