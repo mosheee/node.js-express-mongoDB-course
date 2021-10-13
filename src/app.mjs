@@ -10,6 +10,8 @@ const viewsPath = path.join(dirName, '../templates/views')
 const partialsPath = path.join(dirName, '../templates/partials')
 
 const app = express()
+const port = process.env.PORT || 3000
+
 const publicDirPath = path.join(dirName, '../public');
 app.set('view engine', 'hbs')
 app.set('views', viewsPath)
@@ -78,6 +80,6 @@ app.get('/weather', (req, res) => {
 app.get('*', (req, res) => {
   res.send('my 404 page')
 })
-app.listen(3000, () => {
-  console.log('Server is up on port 3000')
+app.listen(port, () => {
+  console.log('Server is up on port ' + port)
 })

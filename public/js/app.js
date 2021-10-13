@@ -1,7 +1,7 @@
 
 
 // with fetch we can take a result from one http and use it in another http
-fetch('http://localhost:3000/weather?address=boston').then((result) => {
+fetch('/weather?address=boston').then((result) => {
     result.json().then((data) => {})
 })
 
