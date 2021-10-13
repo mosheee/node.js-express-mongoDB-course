@@ -11,7 +11,9 @@ export const forcast = (latitude, longitude, callback) => {
         } 
         else {
             const temp = body.current.temperature;
-            callback(undefined , 'the temp is ' + temp )
+            const location = body.location.name
+            const date = body.current.observation_time
+            callback(undefined , 'the temp is ' + temp + ' , location: ' + location + ', tomezone: ' + date)
         }
     })
 }
